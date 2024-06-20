@@ -32,7 +32,7 @@ export const siteConfig: SiteConfig = {
     //Prefix for API auth routes. Routes that start with this prefix are used for api auth purposes.
     apiAuthPrefix: '/api/auth',
     //Default redirect path after loging in.
-    defaultLoginRedirect: '/dashboard/example'
+    defaultLoginRedirect: '/dashboard'
   },
   fileStorage: {
     // If you use AWS S3/Cloudfront, put values in here

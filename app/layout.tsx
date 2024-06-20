@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 const RootLayout = async ({ children }: Readonly<{ children: React.ReactNode }>) => {
   const session = await auth();
-  console.log('SESSION FROM LAYOUT', session);
+  //console.log('SESSION FROM LAYOUT', session);
   const themeColor = siteConfig.themeColor;
 
   return (
