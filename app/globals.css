@@ -1,0 +1,301 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+:root {
+    height: 100%
+}
+
+
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 240 10% 3.9%;
+        --card: 0 0% 100%;
+        --card-foreground: 240 10% 3.9%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 240 10% 3.9%;
+        --primary: 142.1 76.2% 36.3%;
+        --primary-foreground: 355.7 100% 97.3%;
+        --secondary: 240 4.8% 95.9%;
+        --secondary-foreground: 240 5.9% 10%;
+        --muted: 207 22% 95%;
+        --muted-foreground: 207 22% 60%;
+        --accent: 142.1 76.2% 36.3%;
+        --accent-foreground: 240 5.9% 10%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 5.9% 90%;
+        --input: 207 22% 95%;
+        --ring: 142.1 76.2% 36.3%;
+        --radius: 0.5rem; 
+    }
+
+    .dark {
+        --background: 0 0% 10%;
+        --foreground: 0 0% 100%;
+        --card: 0 0% 13%;
+        --card-foreground: 0 0% 83%;
+        --popover: 0 0% 10%;
+        --popover-foreground: 0 0% 100%;
+        --primary: 151 93% 47%;
+        --primary-foreground: 151 81% 16%;
+        --secondary: 240 3.7% 15.9%;
+        --secondary-foreground: 0 0% 98%;
+        --muted: 0 0% 13%;
+        --muted-foreground: 0 0% 34%;
+        --accent: 151 93% 47%;
+        --accent-foreground: 151 81% 16%;
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 0 0% 24%;
+        --input: 0 0% 100%;
+        --ring: 234 79% 65%;
+    }
+}
+
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    html {
+        @apply scroll-smooth;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+@layer utilities {
+    .min-h-screen {
+        min-height: 100vh; /* Fallback */
+        min-height: 100dvh;
+    }
+    .h-screen {
+        height: 100vh; /* Fallback */
+        height: 100dvh;
+    }
+}
+
+/* TIPTAP Editor */
+.ProseMirror {
+    min-height: 300px;
+}
+
+.ProseMirror p {
+    font-size: 1em;
+    padding: 0 0 10px 0
+
+}
+.ProseMirror a {
+    color: #07e77b;
+}
+
+.ProseMirror h1 {
+    font-size: 3rem; /* 48px text-5xl */
+    line-height: 1; 
+    padding-bottom: 5px;
+}
+
+.ProseMirror h2 {
+    font-size: 2.25rem; /* 36px text-4xl */
+    line-height: 2.5rem; /* 40px */
+    padding-bottom: 5px;
+
+}
+
+.ProseMirror h3 {
+    font-size: 1.875rem; /* 30px text-3xl */
+    line-height: 2.25rem; /* 36px */
+    padding-bottom: 5px;
+}
+
+.ProseMirror h4 {
+    font-size: 1.5rem; /* 24px text-2xl */
+    line-height: 2rem; /* 32px */
+    padding-bottom: 2px;
+}
+
+.ProseMirror h5 {
+    font-size: 1.25rem; /* 20px text-xl */
+    line-height: 1.75rem; /* 28px */
+    padding-bottom: 2px;
+}
+
+.ProseMirror h6 {
+    font-size: 1.125rem; /* 18px text-lg */
+    line-height: 1.75rem; /* 28px */
+}
+
+
+.ProseMirror ul {
+    list-style: disc;
+    padding: 7px 0 20px 20px;
+}
+.ProseMirror ol {
+    list-style: numbered;
+    padding: 7px 0 20px 20px;
+}
+
+.ProseMirror ul li::marker 
+{
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+
+.ProseMirror li {
+    padding: 0 0 3px 0;
+}
+.ProseMirror li p {
+    padding: 0 0 5px 0;
+}
+
+
+.ProseMirror blockquote {
+    margin: 15px 0;
+    border-left: 7px solid #c8c8c8;
+    padding: 0.5em 20px;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+.ProseMirror blockquote:before {
+    color: #333;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+.ProseMirror blockquote p {
+    display: inline;
+    font-style: italic;
+}
+
+
+.ProseMirror pre {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 0.8em;
+}
+
+
+
+
+/* BLOG PAGE */
+#blog-content p {
+    font-size: 18px;
+    padding-bottom: 20px;
+}
+#blog-content a {
+    color: #07e77b;
+}
+
+#blog-content h1 {
+    font-size: 3rem; /* 48px text-5xl */
+    line-height: 1; 
+    padding: 15px 0 5px 0;
+}
+
+#blog-content h2 {
+    font-size: 2.25rem; /* 36px text-4xl */
+    line-height: 2.5rem; /* 40px */
+    padding: 13px 0 5px 0;
+
+}
+
+#blog-content h3 {
+    font-size: 1.875rem; /* 30px text-3xl */
+    line-height: 2.25rem; /* 36px */
+    padding: 10px 0 5px 0;
+
+}
+
+#blog-content h4 {
+    font-size: 1.5rem; /* 24px text-2xl */
+    line-height: 2rem; /* 32px */
+    padding: 8px 0 3px 0;
+}
+
+#blog-content h5 {
+    font-size: 1.25rem; /* 20px text-xl */
+    line-height: 1.75rem; /* 28px */
+    padding: 8px 0 3px 0;
+}
+
+#blog-content h6 {
+    font-size: 1.125rem; /* 18px text-lg */
+    line-height: 1.75rem; /* 28px */
+    padding: 5px 0 0 0;
+}
+
+
+#blog-content ul {
+    list-style: disc;
+    padding: 7px 0 20px 20px;
+}
+#blog-content ol {
+    list-style: numbered;
+    padding: 7px 0 20px 20px;
+}
+
+#blog-content ul li::marker 
+{
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+#blog-content li {
+    padding: 0 0 3px 0;
+}
+
+#blog-content li p {
+    padding: 0 0 5px 0;
+}
+
+#blog-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+    border-radius: 8px; 
+}
+
+#blog-content a {
+    text-decoration: none;
+}
+
+#blog-content a:hover {
+    text-decoration: underline;
+}
+
+#blog-content blockquote {
+    margin: 15px 0;
+    border-left: 7px solid #333;
+    padding: 0.5em 20px;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+#blog-content blockquote:before {
+    color: #fff;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+#blog-content blockquote p {
+    display: inline;
+    font-style: italic;
+}
+
+#blog-content pre {
+    background-color: #252525;
+    color: #fff;
+    margin: 0 0 10px 0;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 0.8em;
+}
